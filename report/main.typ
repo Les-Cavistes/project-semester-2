@@ -12,6 +12,17 @@
 )
 
 = Introduction
+#underline[*Contexte du projet :*] Dans le cadre de notre formation, nous avons pour mission de développer un projet complet, de sa définition à sa réalisation, en passant par sa conception, spécification, organisation, et choix technologiques. Ce projet nous permet de mettre en pratique nos compétences acquises et de travailler en équipe pour répondre à un besoin concret.
+\ \
+#underline[*Objectif :*] L'objectif de ce projet est de créer une plateforme de gestion de transport urbain qui intègre toutes les facettes du transport en milieu urbain. Cette plateforme vise à optimiser les méthodes d'accès aux informations de transport pour les utilisateurs, en leur offrant des fonctionnalités avancées telles que la recherche de stations, le calcul d'itinéraires, et la gestion des perturbations en temps réel.
+\ \
+#underline[*Importance du projet :*] Dans un contexte où la mobilité urbaine est en constante évolution, il est crucial de disposer d'outils performants et intuitifs pour faciliter les déplacements quotidiens. Notre plateforme se veut être une solution complète, capable de répondre aux besoins variés des utilisateurs, qu'ils soient voyageurs réguliers ou touristes.
+\ \
+#underline[*Organisation du document :*] Ce document est structuré pour présenter les différentes étapes de notre projet, depuis la définition des besoins jusqu'à la réalisation technique. Chaque section détaille les spécifications, les choix technologiques, et les méthodes d'organisation que nous avons adoptés pour mener à bien ce projet.
+\ \
+En développant cette plateforme, nous espérons non seulement répondre aux attentes des utilisateurs, mais aussi contribuer à l'amélioration de l'expérience de transport urbain.
+
+#pagebreak()
 = Définition précise des besoins du client
 #underline[*Objectif :*] Rédiger un texte descriptif d'une page qui décrit précisément ce que le client attend de la plateforme de gestion de transport urbain.
 \ \
