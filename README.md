@@ -6,8 +6,8 @@ We are a three students team from the CNAM school in Paris. We are currently wor
 
 ## Project repos
 
-- [Frontend](https://github.com/Les-Cavistes/project-semester-2-frontend)
-- [Backend](https://github.com/Les-Cavistes/project-semester-2-backend)
+- [Frontend](https://github.com/Les-Cavistes/project-semester-2-front)
+- [Backend](https://github.com/Les-Cavistes/project-semester-2-back)
 
 ## The team
 
