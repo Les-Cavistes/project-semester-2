@@ -1,0 +1,31 @@
+# Définition des composants principaux
+Frontend: Frontend SvelteKit {
+  shape: rectangle
+  style.fill: "#FF3E00" # Couleur Svelte
+}
+
+Backend: Backend Rust {
+  shape: rectangle
+  style.fill: "#DEA584" # Couleur Rust
+}
+
+RATP: API RATP {
+  shape: rectangle
+  style.fill: "#1972d2"
+}
+
+# Définition des relations
+Frontend -> RATP: Appels API directs {
+  style.stroke-dash: 0
+  label: "Données temps réel\nInfo stations\nRequêtes rapides"
+}
+
+Backend -> RATP: Appels API programmés {
+  style.stroke-dash: 0
+  label: "Données massives\nMises à jour horaires\nOpérations longues"
+}
+
+Frontend -> Backend: Appels API internes {
+  style.stroke: "#666666"
+  label: "Opérations complexes"
+}

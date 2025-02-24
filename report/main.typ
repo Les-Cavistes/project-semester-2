@@ -12,6 +12,21 @@
 )
 
 = Introduction
+== Contexte du projet.
+Dans le cadre de notre formation, nous avons pour mission de développer un projet complet, de sa définition à sa réalisation, en passant par sa conception, spécification, organisation, et choix technologiques. Ce projet nous permet de mettre en pratique nos compétences acquises et de travailler en équipe pour répondre à un besoin concret.
+
+== Objectif.
+L'objectif de ce projet est de créer une plateforme de gestion de transport urbain qui intègre toutes les facettes du transport en milieu urbain. Cette plateforme vise à optimiser les méthodes d'accès aux informations de transport pour les utilisateurs, en leur offrant des fonctionnalités avancées telles que la recherche de stations, le calcul d'itinéraires, et la gestion des perturbations en temps réel.
+\ \
+== Importance du projet
+Dans un contexte où la mobilité urbaine est en constante évolution, il est crucial de disposer d'outils performants et intuitifs pour faciliter les déplacements quotidiens. Notre plateforme se veut être une solution complète, capable de répondre aux besoins variés des utilisateurs, qu'ils soient voyageurs réguliers ou touristes.
+\ \
+== Organisation du document
+Ce document est structuré pour présenter les différentes étapes de notre projet, depuis la définition des besoins jusqu'à la réalisation technique. Chaque section détaille les spécifications, les choix technologiques, et les méthodes d'organisation que nous avons adoptés pour mener à bien ce projet.
+\ \
+En développant cette plateforme, nous espérons non seulement répondre aux attentes des utilisateurs, mais aussi contribuer à l'amélioration de l'expérience de transport urbain.
+
+#pagebreak()
 = Définition précise des besoins du client
 #underline[*Objectif :*] Rédiger un texte descriptif d'une page qui décrit précisément ce que le client attend de la plateforme de gestion de transport urbain.
 \ \
@@ -33,8 +48,6 @@ Voici une description détaillée des besoins identifiés :
 -  #underline[*Prise en compte des problèmes sur le réseau :*] La plateforme doit informer en temps réel les utilisateurs des perturbations sur le réseau (travaux, retards, grèves, etc.). Les notifications doivent être envoyées pour prévenir des modifications d'itinéraires ou des retards potentiels.
 
 - #underline[*Proposition de lieux à visiter :*] Enfin, pour améliorer l'expérience utilisateur, la plateforme doit proposer des lieux d'intérêt ou des restaurants à visiter à proximité des sorties de métro ou des arrêts de bus. Ces recommandations doivent être personnalisables en fonction des préférences de l'utilisateur.
-\ \
-En répondant à ces besoins, notre plateforme vise à offrir une solution complète et intuitive pour faciliter les déplacements urbains et améliorer la satisfaction des utilisateurs.
 
 #pagebreak()
 
@@ -92,3 +105,28 @@ En répondant à ces besoins, notre plateforme vise à offrir une solution compl
 3. #underline[*Gestion de perturbation :*] Un gestionnaire de réseau reçoit une alerte de perturbation et met à jour les informations en temps réel pour les utilisateurs.
 \ \
 En définissant ces spécifications, nous posons les bases techniques et fonctionnelles nécessaires pour développer une plateforme de gestion de transport urbain efficace et répondant aux besoins des utilisateurs.
+
+= Architecture technique
+#underline[*Objectif :*] Présenter l'architecture technique de la plateforme et les interactions entre les différents composants.
+\ \
+== Vue d'ensemble
+Notre architecture technique repose sur une approche moderne combinant un frontend SvelteKit pour l'interface utilisateur et un backend Rust pour les opérations complexes. Cette architecture permet d'optimiser les performances tout en maintenant une excellente expérience utilisateur.
+\ \
+== Schéma d'architecture
+#figure(
+  image(
+      "assets/architecture.png",
+      width: 70%,
+  ),
+  caption: "Schéma d'architecture technique de la plateforme",
+)
+\ \
+Le schéma ci-dessus illustre les trois composants principaux de notre architecture :
+
+- #underline[*Frontend SvelteKit :*] Gère l'interface utilisateur et effectue des appels API directs pour les données en temps réel.
+- #underline[*Backend Rust :*] Traite les opérations complexes et les requêtes nécessitant des calculs intensifs.
+- #underline[*API RATP :*] Fournit les données de transport en temps réel et les informations sur le réseau.
+\
+Cette architecture permet une répartition efficace des responsabilités :
+- Les requêtes simples et rapides sont effectuées directement depuis le frontend vers l'API RATP
+- Les opérations plus complexes (agrégation de données, ...) sont déléguées au backend Rust
