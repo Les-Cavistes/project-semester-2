@@ -105,3 +105,28 @@ Voici une description détaillée des besoins identifiés :
 3. #underline[*Gestion de perturbation :*] Un gestionnaire de réseau reçoit une alerte de perturbation et met à jour les informations en temps réel pour les utilisateurs.
 \ \
 En définissant ces spécifications, nous posons les bases techniques et fonctionnelles nécessaires pour développer une plateforme de gestion de transport urbain efficace et répondant aux besoins des utilisateurs.
+
+= Architecture technique
+#underline[*Objectif :*] Présenter l'architecture technique de la plateforme et les interactions entre les différents composants.
+\ \
+== Vue d'ensemble
+Notre architecture technique repose sur une approche moderne combinant un frontend SvelteKit pour l'interface utilisateur et un backend Rust pour les opérations complexes. Cette architecture permet d'optimiser les performances tout en maintenant une excellente expérience utilisateur.
+\ \
+== Schéma d'architecture
+#figure(
+  image(
+      "assets/architecture.png",
+      width: 70%,
+  ),
+  caption: "Schéma d'architecture technique de la plateforme",
+)
+\ \
+Le schéma ci-dessus illustre les trois composants principaux de notre architecture :
+
+- #underline[*Frontend SvelteKit :*] Gère l'interface utilisateur et effectue des appels API directs pour les données en temps réel.
+- #underline[*Backend Rust :*] Traite les opérations complexes et les requêtes nécessitant des calculs intensifs.
+- #underline[*API RATP :*] Fournit les données de transport en temps réel et les informations sur le réseau.
+\
+Cette architecture permet une répartition efficace des responsabilités :
+- Les requêtes simples et rapides sont effectuées directement depuis le frontend vers l'API RATP
+- Les opérations plus complexes (agrégation de données, ...) sont déléguées au backend Rust
