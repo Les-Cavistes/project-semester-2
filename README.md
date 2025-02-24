@@ -4,6 +4,11 @@
 
 We are a three students team from the CNAM school in Paris. We are currently working on a project for our second semester.
 
+## Project repos
+
+- [Frontend](https://github.com/Les-Cavistes/project-semester-2-frontend)
+- [Backend](https://github.com/Les-Cavistes/project-semester-2-backend)
+
 ## The team
 
 - [Guillian Celle](https://github.com/Glacoon).
